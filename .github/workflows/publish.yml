@@ -7,6 +7,7 @@ on:
 
 permissions:
   id-token: write
+  contents: write
 
 jobs:
   publish:
@@ -36,3 +37,39 @@ jobs:
 
       - name: Publish
         run: npm publish --access public
+
+      - name: Extract changelog entry
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          awk -v ver="$VERSION" '
+            /^## \[/ {
+              if (capture) exit
+              if ($0 ~ "^## \\[" ver "\\]") { capture=1; next }
+              next
+            }
+            capture { print }
+          ' CHANGELOG.md > /tmp/release-notes.md
+
+          if [ ! -s /tmp/release-notes.md ]; then
+            echo "error: no CHANGELOG.md entry found for version ${VERSION}" >&2
+            exit 1
+          fi
+
+      - name: Attach WASM artifacts to GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ASSETS=(
+            wasm/dist/cld.node.js
+            wasm/dist/cld.node.wasm
+            wasm/dist/cld.web.mjs
+            wasm/dist/cld.web.wasm
+          )
+          if gh release view "${GITHUB_REF_NAME}" >/dev/null 2>&1; then
+            gh release upload "${GITHUB_REF_NAME}" "${ASSETS[@]}" --clobber
+          else
+            gh release create "${GITHUB_REF_NAME}" \
+              --title "${GITHUB_REF_NAME}" \
+              --notes-file /tmp/release-notes.md \
+              "${ASSETS[@]}"
+          fi

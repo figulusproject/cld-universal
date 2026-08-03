@@ -10,6 +10,10 @@ point.
 
 ## [Upcoming]
 
+### Changed
+
+- Publish workflow (`publish.yml`) now attaches the built WASM artifacts (`cld.node.js`, `cld.node.wasm`, `cld.web.mjs`, `cld.web.wasm`) to the pushed tag's GitHub release, using the matching version's entry from this changelog as the release notes.
+
 ### Fixed
 
 - Browser entry point renamed from `wasm/browser-entry.js` to `wasm/browser-entry.mjs`. Node 20 lacks the fallback that reparses typeless .js files as ESM, so import() hit them through the CJS loader and errored on the `import` statement. Renaming it to use an MJS extension avoids the ambiguity.
