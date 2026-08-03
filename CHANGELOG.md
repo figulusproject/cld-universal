@@ -8,6 +8,12 @@ This fork ([`cld-universal`](https://github.com/figulusproject/cld-universal)) d
 [`dachev/node-cld`](https://github.com/dachev/node-cld) at `2.10.1`. Entries below start from that
 point.
 
+## [Upcoming]
+
+### Fixed
+
+- Browser entry point renamed from `wasm/browser-entry.js` to `wasm/browser-entry.mjs`. Node 20 lacks the fallback that reparses typeless .js files as ESM, so import() hit them through the CJS loader and errored on the `import` statement. Renaming it to use an MJS extension avoids the ambiguity.
+
 ## [2.11.1] - 2026-08-03
 
 ### Added
