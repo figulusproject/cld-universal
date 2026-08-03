@@ -2,11 +2,7 @@
 [![CI](https://github.com/figulusproject/cld-universal/actions/workflows/ci.yml/badge.svg)](https://github.com/figulusproject/cld-universal/actions/workflows/ci.yml)
 [![NPM version](https://badge.fury.io/js/cld-universal.svg)](http://badge.fury.io/js/cld-universal)
 
-[![Stand With Palestine](https://raw.githubusercontent.com/standforhumanity/stand-with-palestine/main/Banners/Banner1.svg)](https://stand-with-palestine.vercel.app/)
-
-[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://stand-with-ukraine.pp.ua)
-
-*Fork developed on stolen Wurundjeri Land. We pay our respects to Elders past, present, and emerging, and with all peoples resisting occupation.*
+*Everyone has the right to resist occupation.*
 
 > **This is a fork of [dachev/node-cld](https://github.com/dachev/node-cld).** The original project has had no maintainer activity in over a year, and has outdated dependencies causing 3 high severity security issues.
 >
