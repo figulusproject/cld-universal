@@ -10,13 +10,13 @@
     "wasm",
     "webassembly"
   ],
-  "version": "2.11.1",
+  "version": "2.11.2",
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {
     ".": {
       "types": "./index.d.ts",
-      "browser": "./wasm/browser-entry.js",
+      "browser": "./wasm/browser-entry.mjs",
       "default": "./index.js"
     }
   },
@@ -25,7 +25,7 @@
     "index.d.ts",
     "lib",
     "wasm/dist",
-    "wasm/browser-entry.js",
+    "wasm/browser-entry.mjs",
     "src",
     "deps/cld/public",
     "deps/cld/internal",

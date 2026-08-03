@@ -8,6 +8,16 @@ This fork ([`cld-universal`](https://github.com/figulusproject/cld-universal)) d
 [`dachev/node-cld`](https://github.com/dachev/node-cld) at `2.10.1`. Entries below start from that
 point.
 
+## [2.11.2] - 2026-08-03
+
+### Changed
+
+- Publish workflow (`publish.yml`) now attaches the built WASM artifacts (`cld.node.js`, `cld.node.wasm`, `cld.web.mjs`, `cld.web.wasm`) to the pushed tag's GitHub release, using the matching version's entry from this changelog as the release notes.
+
+### Fixed
+
+- Browser entry point renamed from `wasm/browser-entry.js` to `wasm/browser-entry.mjs`. Node 20 lacks the fallback that reparses typeless .js files as ESM, so import() hit them through the CJS loader and errored on the `import` statement. Renaming it to use an MJS extension avoids the ambiguity.
+
 ## [2.11.1] - 2026-08-03
 
 ### Added
