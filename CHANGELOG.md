@@ -8,7 +8,7 @@ This fork ([`cld-universal`](https://github.com/figulusproject/cld-universal)) d
 [`dachev/node-cld`](https://github.com/dachev/node-cld) at `2.10.1`. Entries below start from that
 point.
 
-## [Upcoming]
+## [2.11.2] - 2026-08-03
 
 ### Changed
 

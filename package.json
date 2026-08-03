@@ -10,7 +10,7 @@
     "wasm",
     "webassembly"
   ],
-  "version": "2.11.1",
+  "version": "2.11.2",
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {
