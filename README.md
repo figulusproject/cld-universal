@@ -4,7 +4,7 @@
 
 *Everyone has the right to resist occupation.*
 
-> **This is a fork of [dachev/node-cld](https://github.com/dachev/node-cld).** The original project has had no maintainer activity in over a year, and has outdated dependencies causing 3 high severity security issues.
+> **This is a fork of [dachev/node-cld](https://github.com/dachev/node-cld).** The original project has had no maintainer activity in over a year, and has outdated dependencies causing several high-severity security issues.
 >
 > In addition to updating outdated dependencies, this fork adds a **WASM fallback backend** (native addon first, WASM if it's unavailable - see below), enabling use in environments without a C++ toolchain, including in the browser.
 >

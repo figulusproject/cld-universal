@@ -8,6 +8,16 @@ This fork ([`cld-universal`](https://github.com/figulusproject/cld-universal)) d
 [`dachev/node-cld`](https://github.com/dachev/node-cld) at `2.10.1`. Entries below start from that
 point.
 
+## [2.11.3] - 2026-10-19
+
+### Security
+
+- Updated `brace-expansion` from `5.0.9` to `5.0.12` (fixes a high severity advisory, `CVE-2026-102276`).
+
+### Changed
+
+- The CI workflow (`ci.yml`) and security workflow (`security.yml`) now use Node 22 where Node 20 was previously used, and Node 24 where Node 22 was previously used. Node 20 has now reached its EOL and is no longer supported by GitHub Actions.
+
 ## [2.11.2] - 2026-08-03
 
 ### Changed
