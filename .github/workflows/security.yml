@@ -22,7 +22,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
 
       # Reads package-lock.json directly -- no install needed. Only covers
       # the 3 real npm deps (glob, node-addon-api, underscore); the vendored

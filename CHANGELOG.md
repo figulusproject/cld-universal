@@ -14,6 +14,10 @@ point.
 
 - Updated `brace-expansion` from `5.0.9` to `5.0.12` (fixes a high severity advisory, `CVE-2026-102276`).
 
+### Changed
+
+- The CI workflow (`ci.yml`) and security workflow (`security.yml`) now use Node 22 where Node 20 was previously used, and Node 24 where Node 22 was previously used. Node 20 has now reached its EOL and is no longer supported by GitHub Actions.
+
 ## [2.11.2] - 2026-08-03
 
 ### Changed
