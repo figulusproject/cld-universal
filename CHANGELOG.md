@@ -8,6 +8,12 @@ This fork ([`cld-universal`](https://github.com/figulusproject/cld-universal)) d
 [`dachev/node-cld`](https://github.com/dachev/node-cld) at `2.10.1`. Entries below start from that
 point.
 
+## [Upcoming]
+
+### Security
+
+- Updated `brace-expansion` from `5.0.9` to `5.0.12` (fixes a high severity advisory, `CVE-2026-102276`).
+
 ## [2.11.2] - 2026-08-03
 
 ### Changed
